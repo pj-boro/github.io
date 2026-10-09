@@ -1,31 +1,76 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>Personal Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Condensed:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <title>My Home Page</title>
+    <style>
+        body {
+            font-family: "Libre Caslon Condensed", serif;
+            font-optical-sizing: auto;
+            background-color: #0d1117;
+            background-image: radial-gradient(#30363d 1px, transparent 1px);
+            background-size: 20px 20px;
+            color: #fff;
+        }
+
+
+        .work-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            justify-items: center;
+            gap: 1rem;
+        }
+
+        .work-grid>div {
+            width: 91.666667%;
+        }
+        /* Small screens */
+        @media (min-width: 576px) {
+            .work-grid>div {
+                width: 100%;
+            }
+        }
+
+        /* Medium and larger screens */
+        @media (min-width: 768px) {
+            .work-grid {
+                grid-template-columns: repeat(2, 25%);
+                justify-content: space-evenly;
+                align-items: stretch;
+            }
+        }
+    </style>
 </head>
 
-<body>
+<body class="m-2 pt-5 px-3">
+    <h1 class="text-center mb-5">Hello, I'm Pranab Jyoti Boro</h1>
+    <h4 class="text-center mb-5">
+        I design and build websites, custom portals, CMS platforms, and management systems.
 
-    <h1>Hello, I'm Pranab Jyoti Boro</h1>
+    </h4>
 
-    <p>
-        I build websites and simple business management systems.
-    </p>
-
-    <h2>Services</h2>
-
-    <ul>
-        <li>Personal Homepage</li>
-        <li>Business Websites</li>
-        <li>Custom Portals</li>
-        <li>Admin Dashboards</li>
-        
-    </ul>
-
-    <h2>Contact</h2>
-
-    <p>WhatsApp: 9435542658</p>
-    <p>Email: pjbodo@gmail.com</p>
-
+    <div class="work-grid">
+        <div class="border p-3">
+            <h2>My Work</h2>
+            <ul>
+                <li>Personal Homepage</li>
+                <li>Custom Portals</li>
+                <li>Admin Dashboards</li>
+            </ul>
+        </div>
+        <div class="border p-3">
+            <h2>Contact</h2>
+            <p><i class="fa-brands fa-at"></i> - pjbodo@gmail.com</p>
+        </div>
+    </div>
 </body>
+
 </html>
